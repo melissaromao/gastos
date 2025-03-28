@@ -1,0 +1,21 @@
+<body class="bg-light">
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">Meus Gastos</h1>
+    <div class="row justify-content-center">
+      {{#each gastos}}
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-3 d-flex justify-content-center">
+        <div class="card shadow" style="width: 18rem; border: none;" >
+          <div class="card-body text-center">
+            <h5 class="card-title">{{categoria}}</h5>
+            <p class="card-text">Prioridade: {{prioridade}}</p>
+            <p class="card-text fw-bold" style="color:  #cc063e;">R$ {{valor}}</p>
+            <a href="/gastos/{{id}}/editar" class="btn" style="background-color: #ffc800; color: white; text-transform: uppercase; font-weight: 500;">  <i class="bi bi-pencil"></i>
+</a>
+            <a href="/gastos/{{id}}/excluir" class="btn" style="background-color: #e83535; color: white; text-transform: uppercase; font-weight: 500;">  <i class="bi bi-trash"></i>
+</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
